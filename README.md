@@ -36,7 +36,7 @@ https://node-js-assigments.onrender.com/students/topper
 ## Deployment & Documentation
 
 ### 🌐 Render Deployment:
-https://node-js-assigments.onrender.com
+https://node-js-assigments.onrender.com/students
 
 ### 📬 Postman Documentation:
 https://documenter.getpostman.com/view/50841552/2sBXcGCeJU
