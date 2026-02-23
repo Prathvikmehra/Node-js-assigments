@@ -125,7 +125,7 @@ app.put("/products/:id/price", (req, res) => {
     if (price == undefined) {
         return res.status(400).json({ message: "price value is required" });
     }
-    products[index].price = price;
+    products[index].price = price ;
     res.status(200).json({
         message: "price updated successfully",
         product: products[index]
