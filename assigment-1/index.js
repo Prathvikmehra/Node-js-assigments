@@ -117,15 +117,25 @@ app.get("/students/:id",(req, res)=>{
 
 
 app.get("/students/branch/:branchName", (req, res)=>{
-    const branch = students.find(s=>s.branch.toLocaleLowerCase() == req.params.branchName.toLocaleLowerCase());
+const branch = students.filter(
+  s => s.branch.toLowerCase() === req.params.branchName.toLowerCase()
+);
     if(!branch){
         return res.status(404).json({message:"No student found"});
     }
     res.status(200).json(branch);
 })
 
+app.get("/students/:branchname/:semester", (req, res) => {
+  const result = students.filter(
+    s =>s.branch.toLowerCase() === req.params.branchname.toLowerCase() && s.semester == req.params.semester);
+  if (result.length === 0) {
+    return res.status(404).json({ message: "No student found" });
+  }
+  res.status(200).json(result);
+});
 
 
 app.listen(5174, () => {
 console.log("Server started on port 5174");
-});
+}); 
