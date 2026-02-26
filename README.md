@@ -41,6 +41,7 @@ https://node-js-assigments.onrender.com/students
 ### 📬 Postman Documentation:
 https://documenter.getpostman.com/view/50841552/2sBXcGCeJU
 
+///ASSIGMENT-2 overview
 
 E-Commerce Product API
 Objective
@@ -124,3 +125,40 @@ https://node-js-assigments-2.onrender.com/products
 
 📬 Postman Documentation:
 https://documenter.getpostman.com/view/50841552/2sBXcGFfiG
+
+
+///ASSIGMENT-3 Overview
+
+State Statistics Management API
+
+This is a RESTful API built with Node.js and Express to manage statistical data of Indian states using an in-memory JSON array (no database). All CRUD operations are implemented including full and partial updates, filtering logic, and multiple delete endpoints.
+
+🚀 Live API
+
+🔗 https://node-js-assigments-4.onrender.com/states
+
+📘 API Documentation
+
+Complete route documentation with sample requests and responses:
+
+🔗 https://documenter.getpostman.com/view/50841552/2sBXcHgxzR
+
+✅ Features
+
+GET all states or by ID
+
+GET state with highest GDP
+
+POST to add a new state
+
+PUT to replace full state or specific fields
+
+PATCH for partial updates
+
+DELETE by ID, name, or low-literacy threshold
+
+Proper use of HTTP status codes
+
+CORS and JSON middleware enabled
+
+This project demonstrates understanding of Express routing, RESTful design, dynamic array manipulation, and correct handling of different HTTP methods.
