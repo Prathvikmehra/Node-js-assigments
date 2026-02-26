@@ -74,7 +74,7 @@ app.get("/products/category/:categoryName",(req, res)=>{
 app.post("/products", (req, res) => {
   const { id,name, category, price, stock, rating } = req.body;
   if ( !id || !name || !category || !price || !stock || !rating ) {
-    return res.status(400).json({ message: "All fields required" });
+    return res.status(404).json({ message: "All fields required" });
   }
   products.push({ id, name, category, price, stock, rating });
   res.status(201).json({
