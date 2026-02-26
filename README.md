@@ -42,3 +42,45 @@ https://node-js-assigments.onrender.com/students
 https://documenter.getpostman.com/view/50841552/2sBXcGCeJU
 
 
+
+
+E-Commerce Product API
+Objective
+
+This API manages e-commerce product records using an in-memory JSON database.
+
+It supports retrieving products, adding new products, and updating product details using REST principles.
+
+Implemented Routes
+
+GET /products
+GET /products/:id
+GET /products/category/:categoryName
+
+POST /products
+
+PUT /products/:id
+PUT /products/:id/stock
+PUT /products/:id/price
+
+Sample Live URLs
+
+https://node-js-assigments-2.onrender.com/products
+
+https://node-js-assigments-2.onrender.com/products/1
+
+Steps to Run Locally
+
+Clone repository
+
+npm install
+
+node server.js
+
+Deployment & Documentation
+
+🌐 Render Deployment:
+https://node-js-assigments-2.onrender.com/products
+
+📬 Postman Documentation:
+https://documenter.getpostman.com/view/50841552/2sBXcGFfiG
