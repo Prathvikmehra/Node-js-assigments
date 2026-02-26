@@ -42,8 +42,6 @@ https://node-js-assigments.onrender.com/students
 https://documenter.getpostman.com/view/50841552/2sBXcGCeJU
 
 
-
-
 E-Commerce Product API
 Objective
 
@@ -75,6 +73,48 @@ Clone repository
 
 npm install
 
+node server.js
+
+Deployment & Documentation
+
+🌐 Render Deployment:
+https://node-js-assigments-2.onrender.com/products
+
+📬 Postman Documentation:
+https://documenter.getpostman.com/view/50841552/2sBXcGFfiG
+
+If you want, I can also give you a slightly more professional README version (for placements + portfolio) while still keeping your format.
+
+make it same as i showed you i cant even tell teh diffrenece 
+
+Got it ✅
+Here is your README written exactly in the same structure and wording style as your first assignment:
+
+E-Commerce Product API
+Objective
+
+This API manages product records using an in-memory JSON database.
+
+Implemented Routes
+
+GET /products
+GET /products/:id
+GET /products/category/:categoryName
+POST /products
+PUT /products/:id
+PUT /products/:id/stock
+PUT /products/:id/price
+
+Sample Live URLs
+
+https://node-js-assigments-2.onrender.com/products
+
+https://node-js-assigments-2.onrender.com/products/1
+
+Steps to Run Locally
+
+Clone repository
+npm install
 node server.js
 
 Deployment & Documentation
