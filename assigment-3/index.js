@@ -44,6 +44,34 @@ app.get("/states", (req, res) => {
     res.status(200).json(states)
 })
 
+
+app.get("/states/population", (req, res)=>{
+    if (!states || states.length === 0) {
+        return res.status(404).json({ message: "No states found" });
+    };
+    let top10 = [...states].sort((a,b)=>b.population - a.population).slice(0,10);
+    res.status(200).json(top10);
+})
+
+app.get("/states/gdp-population", (req, res) => {
+    if (!states || states.length === 0) {
+        return res.status(404).json({ message: "No states found" });
+    }
+    let top10 = [...states].sort((a, b) => (b.gdp / b.population) - (a.gdp / a.population)).slice(0, 10);
+    res.status(200).json(top10);
+});
+
+app.patch("/states/gdp-per-capita", (req, res) => {
+    if (states.length === 0) {
+        return res.status(404).json({ message: "No states found" });
+    }
+    for (let i = 0; i < states.length; i++) {
+        states[i].gdpPerCapita = states[i].gdp / states[i].population;
+    }
+    let top10 = [...states].sort((a, b) => b.gdpPerCapita - a.gdpPerCapita).slice(0, 10);
+    res.status(200).json(top10);
+});
+
 app.get("/states/highest-gdp", (req, res) => {
     if (states.length == 0) {
         return res.status(404).json({ message: "No states found" });
@@ -164,7 +192,6 @@ app.delete("/states/:id", (req, res) => {
 
 app.delete("/states/name/:stateName", (req, res) => {
     let index = states.findIndex(s => s.name.toLowerCase() === req.params.stateName.toLowerCase());
-
     if (index === -1) {
         return res.status(404).json({ message: "Invalid state name" });
     }
